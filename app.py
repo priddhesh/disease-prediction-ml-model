@@ -114,6 +114,9 @@ def predict():
     prediction = predictDisease(symptoms)
     return jsonify({"prediction": prediction})
     
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"Status": "Active"})
 if __name__ == '__main__':
     app.run(debug=True)
 
